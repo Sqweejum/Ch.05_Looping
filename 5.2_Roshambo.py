@@ -29,7 +29,18 @@ elif num==2:
     elif x==2:
         print()
 else:
-    print("scissors")
+    if num==3:
+        print ("scissors")
+    if x==1:
+        print("you win")
+    elif x==2:
+        print("you lose")
+    else:
+        print("tie game")
+
+
+
+
 
 
 
