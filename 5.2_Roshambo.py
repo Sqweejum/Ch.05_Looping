@@ -13,7 +13,7 @@ When the user quits print a win/loss record
 
 import random
 num=random.randint(1,4)
-x = input(int("1 = rock   2 = paper  3 = scissors    enter a number."))
+x = int(input("1 = rock   2 = paper  3 = scissors    enter a number."))
 if num==1:
     print("rock")
     if x == 1:
@@ -29,8 +29,7 @@ elif num==2:
     elif x==2:
         print()
 else:
-    if num==3:
-        print ("scissors")
+    print("scissors")
     if x==1:
         print("you win")
     elif x==2:
