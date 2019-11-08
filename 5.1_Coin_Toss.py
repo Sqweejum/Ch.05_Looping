@@ -20,6 +20,6 @@ for i in range(50):
     else:
         print("tails")
         tails+=1
-print(heads)
-print(tails)
+print(heads,"heads")
+print(tails,"tails")
 
