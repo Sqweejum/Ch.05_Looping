@@ -35,11 +35,21 @@ while not done:
               "   d. stop for the night"
               "   e. status check"
               "   q.Quit")
-    if z == ("q"):
+    if z.lower() == ("q"):
         done = True
-    elif z == ("a"):
+    elif z.lower() == ("a"):
         thirst = 0
-        water -= 3
+        water -=1
+        print("you have",water,"drinks left")
+    elif z.lower() ==("b"):
+        b = random.randint(5,12)
+        distance+=b
+        thirst+=1
+
+
+
+
+
 
 
 
