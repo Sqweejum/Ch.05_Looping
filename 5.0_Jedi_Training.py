@@ -62,3 +62,20 @@ print(num)
      if statements.
       
 '''
+print("give me 7 numbers now!")
+#variables
+positives = 0
+negatives = 0
+zero = 0
+# 7 numbers
+for i in range(7):
+    num = input("give me 7 numbers")
+    if num >0:
+        positives += 1
+    elif num < 0:
+        negatives +=1
+    else:
+        zero+=1
+
+
+
