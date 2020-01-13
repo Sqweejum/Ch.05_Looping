@@ -59,7 +59,7 @@ print(num)
      * Print the total sum of the numbers
      * Print the count of the positive entries, the count of entries equal to zero,
      and the count of negative entries. Use an if, elif, else chain, not just three
-     if statements.
+     if statements. 
       
 '''
 print("give me 7 numbers now!")
