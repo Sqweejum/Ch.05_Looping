@@ -13,11 +13,11 @@ import random
 water = 4
 camel = 0
 bandit = 0
-distance = 20
+distance = 15
 thirst = 0
 
 
-v = input("welcome to the camel game would you like instructions?"
+v = input("welcome to the camel game would you like instructions? "
           "   a. yes      b. no")
 if v == ("a"):
     print("The goal of this game is to make it 200 miles across the desert while bandits chase you."
@@ -33,6 +33,7 @@ while not done:
     num2 = random.randint(10, 20)
     num3 = random.randint(2,4)
     num4 = random.randint(2,3)
+    num5 = random.randint(1,20)
     z = input("what will you do?"
               "   a.Drink from your canteen"
               "   b.Ahead moderate speed"
@@ -53,6 +54,25 @@ while not done:
         bandit+=num
         print("you have traveled",distance, "miles")
         print("the bandits have traveled",bandit, "miles")
+        if thirst >=4:
+            print ("you are thirsty")
+        if thirst >=6:
+            print ("you died of thirst")
+            done = True
+        if camel >= 5:
+            print("your camel is tired.")
+        if camel >=8:
+            print("your camel died of exhaustion.")
+            done = True
+        if num5 == 19:
+            print("you have found an oasis!! you water bottle has been filled")
+            water = 4
+        if distance >= 200:
+            print("You have made it across the desert and escaped the bandits!")
+            done = True
+        if bandit > distance:
+            print("you have been caught by the bandits you lose")
+            done = True
     elif z.lower() ==("c"):
         distance+= num2
         thirst+=1
@@ -60,6 +80,26 @@ while not done:
         bandit+=num
         print("you have traveled",distance, "miles")
         print("the bandits have traveled",bandit, "miles")
+        if thirst >=4:
+            print ("you are thirsty")
+        if thirst >=6:
+            print ("you died of thirst")
+            done = True
+        if camel >= 5:
+            print("your camel is tired.")
+        if camel >=8:
+            print("your camel died of exhaustion.")
+            done = True
+        if num5 == 19:
+            print("you have found an oasis!! you water bottle has been filled")
+            water = 4
+        if distance >= 200:
+            print("You have made it across the desert and escaped the bandits!")
+            done = True
+        if bandit > distance:
+            print("you have been caught by the bandits you lose")
+            done = True
+
     elif z.lower() ==("d"):
         camel=0
         bandit+=num
@@ -68,10 +108,6 @@ while not done:
     elif z.lower() ==("e"):
         print("water:",water)
         print("camel tiredness:",camel)
-
-
-
-
-
-
-
+        print("thirst:",thirst)
+        print("distance traveled:", distance,"miles")
+        print("bandits traveled", bandit,"miles")
